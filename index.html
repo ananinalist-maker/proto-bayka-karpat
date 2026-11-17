@@ -721,6 +721,11 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
 .hero__scrim{background:linear-gradient(90deg,rgba(0,7,5,.8) 0%,rgba(0,7,5,.55) 36%,rgba(0,7,5,0) 66%),linear-gradient(0deg,rgba(0,7,5,.5) 0%,rgba(0,7,5,0) 30%),linear-gradient(180deg,rgba(0,7,5,.45) 0%,rgba(0,7,5,0) 22%)!important}
 .hero h1,.hero__sub{text-shadow:0 2px 16px rgba(0,8,5,.5)}
 .hero__cta .btn .i{width:20px;height:20px;margin-right:8px}
+/* підпис сезону біля паузи */
+.season{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(238,236,226,.6);background:rgba(0,7,5,.35);color:var(--cream);font:400 12px/1 var(--f-head);letter-spacing:.14em;text-transform:uppercase;transition:opacity .25s cubic-bezier(.22,.61,.36,1)}
+.season.is-out{opacity:0}
+@media (prefers-reduced-motion:reduce){.season{display:none}}
+@media (max-width:760px){.season{display:none}}
 /* аудит шрифтів: дрібний текст не менше 12px, підписи з датами календаря 11px+ */
 .chip,.map__cr{font-size:12px}
 .hero__note{font-size:12px}
@@ -859,8 +864,9 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
       <a href="tel:+380964751576" aria-label="Подзвонити: +380 96 475 15 76"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></a>
       <a href="viber://chat?number=%2B380964751576" aria-label="Написати у Viber"><svg class="i" aria-hidden="true"><use href="#i-viber"/></svg></a>
     </div>
-    <p class="hero__note" id="heroNote">Настроєве відео зібране для прототипу за&nbsp;фото садиби. У&nbsp;робочій версії тут будуть ваші фото й&nbsp;відео.</p>
+    <p class="hero__note" id="heroNote">Настроєве відео зібране для прототипу за&nbsp;фото садиби: садиба в&nbsp;чотири пори року. У&nbsp;робочій версії тут будуть ваші фото й&nbsp;відео.</p>
     <div class="hero__ctl">
+      <span class="season" id="season" aria-live="off">Літо</span>
       <button class="hero__pause" id="heroPause" type="button" aria-pressed="false" aria-label="Зупинити відео" hidden><svg class="i i--fill i-pause" viewBox="0 0 14 14" aria-hidden="true"><use href="#i-pause"/></svg><svg class="i i--fill i-play" viewBox="0 0 14 14" aria-hidden="true"><use href="#i-play"/></svg></button>
     </div>
     <a class="qc" id="qc" href="#qb"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg><span class="qc__t" id="qcT">Вільні дати · 2 дорослих · Обрати</span><span class="qc__go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span></a>
@@ -2258,6 +2264,17 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
   })();
 })();
 
+</script>
+<script>
+(function(){
+  var v = document.getElementById('heroVideo'), el = document.getElementById('season');
+  if (!v || !el) return;
+  var N = ['Літо', 'Осінь', 'Зима', 'Весна'], SEG = 4.6, HOLD = 3.0, cur = 0;
+  v.addEventListener('timeupdate', function(){
+    var t = v.currentTime, i = Math.floor((t + (SEG - HOLD) / 2) / SEG) % 4;
+    if (i !== cur) { cur = i; el.classList.add('is-out'); setTimeout(function(){ el.textContent = N[i]; el.classList.remove('is-out'); }, 250); }
+  });
+})();
 </script>
 </body>
 </html>
