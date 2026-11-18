@@ -24,8 +24,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/hero-s1.webp" media="(min-width: 761px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/hero-s1-m.webp" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-bg.webp" media="(min-width: 761px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-bg-m.webp" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-a1.webp" fetchpriority="high">
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "@id": "https://ananinalist-maker.github.io/proto-bayka-karpat/#bayka", "name": "Байка Карпат", "alternateName": ["Байка Карпат Ворохта", "Відпочинковий комплекс «Байка Карпат»"], "description": "Апартаменти й новий котедж на пагорбі над Ворохтою: кухні, басейн з підігрівом тільки для гостей, чан, сауна, тераса з видом на Говерлу. Бронювання напряму в господині.", "url": "https://ananinalist-maker.github.io/proto-bayka-karpat/", "telephone": "+380964751576", "sameAs": ["https://www.instagram.com/bayka_karpat_vorokhta", "https://www.tiktok.com/@baykakarpat"], "image": ["https://ananinalist-maker.github.io/proto-bayka-karpat/img/og.jpg", "https://ananinalist-maker.github.io/proto-bayka-karpat/img/ig-house-pool.webp", "https://ananinalist-maker.github.io/proto-bayka-karpat/img/cottage-log.webp", "https://ananinalist-maker.github.io/proto-bayka-karpat/img/pool-dusk.webp"], "address": {"@type": "PostalAddress", "streetAddress": "вулиця Михайла Грушевського, 88", "addressLocality": "Ворохта", "addressRegion": "Івано-Франківська область", "postalCode": "78595", "addressCountry": "UA"}, "geo": {"@type": "GeoCoordinates", "latitude": 48.2880136, "longitude": 24.5693873}, "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJ1SQV5WzhNkcR0ZgD4YV8-o4", "availableLanguage": ["uk"], "petsAllowed": true, "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Басейн з підігрівом тільки для гостей", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Чан", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Сауна", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Кухня в кожному житлі", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Мангал і альтанка", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Тераса з гамаками", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Трансфер з вокзалу за домовленістю", "value": true}], "containsPlace": [{"@type": "Accommodation", "name": "Апартаменти на першому поверсі", "description": "Три окремі спальні, у кожній двоспальне ліжко. Своя кухня, щоб готувати як удома, і окрема ванна кімната."}, {"@type": "Accommodation", "name": "Апартаменти на другому поверсі", "description": "Чотири спальні, два санвузли, кухня і велика вітальня з панорамним вікном на гори. Окремий вхід і балкон з гойдалкою."}, {"@type": "Accommodation", "name": "Новий котедж 2024 року", "description": "Котедж із колоди, збудований у 2024 році. Три окремі спальні, кожна зі своїм санвузлом, повноцінна кухня і зал для відпочинку."}]}</script>
 <style>
@@ -719,14 +720,26 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
 .hero h1 .nw{display:block}
 @media (max-width:760px){.hero h1 .l2{padding-left:0}.cover .wordmark{white-space:normal;flex-direction:column;font-size:clamp(40px,14vw,64px);line-height:1.05;letter-spacing:.08em}.cover .wordmark .nw{display:block;white-space:nowrap}}
 .hero__media{animation:none!important}
-.hero__scrim{background:linear-gradient(90deg,rgba(0,7,5,.8) 0%,rgba(0,7,5,.55) 36%,rgba(0,7,5,0) 66%),linear-gradient(0deg,rgba(0,7,5,.5) 0%,rgba(0,7,5,0) 30%),linear-gradient(180deg,rgba(0,7,5,.45) 0%,rgba(0,7,5,0) 22%)!important}
+.hero__scrim{background:linear-gradient(90deg,rgba(2,30,20,.86) 0%,rgba(2,30,20,.62) 45%,rgba(2,30,20,.42) 100%),linear-gradient(0deg,rgba(0,10,6,.55) 0%,rgba(0,10,6,0) 35%),linear-gradient(180deg,rgba(0,10,6,.5) 0%,rgba(0,10,6,0) 22%)!important}
+/* арка зі справжніми фото будинку */
+.arch{position:absolute;z-index:3;margin:0;right:clamp(48px,9vw,170px);top:118px;bottom:calc(var(--qbh,96px) + 64px);aspect-ratio:840/1176;max-width:34vw;padding:10px;border-radius:999px 999px 22px 22px;border:1px solid rgba(226,223,211,.55);box-shadow:0 30px 80px -30px rgba(0,0,0,.6)}
+.arch__in{position:relative;width:100%;height:100%;overflow:hidden;border-radius:999px 999px 14px 14px;background:#0b2318}
+.arch .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s cubic-bezier(.4,0,.2,1)}
+.arch .slide.is-on{opacity:1}
+.arch .slide.no-tr{transition:none}
+.arch__cap{position:absolute;z-index:2;left:50%;bottom:26px;transform:translateX(-50%);white-space:nowrap;padding:8px 14px;border-radius:999px;background:rgba(0,12,7,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);font:400 12px/1 var(--f-head);letter-spacing:.16em;text-transform:uppercase;color:var(--cream);transition:opacity .3s}
+.arch__cap.is-out{opacity:0}
+@media (max-width:1023px) and (min-width:761px){.arch{right:4vw;max-width:38vw}}
+@media (max-width:760px){
+ .arch{right:auto;left:50%;transform:translateX(-50%);top:78px;bottom:auto;height:clamp(170px,calc(100svh - 490px),330px);max-width:none;padding:7px}
+ .arch__cap{bottom:14px;font-size:11px;padding:6px 11px}
+ .hero__in{padding-bottom:128px}
+ .hero h1{font-size:clamp(38px,11vw,48px)}
+ .hero__note{display:none}
+}
 .hero h1,.hero__sub{text-shadow:0 2px 16px rgba(0,8,5,.5)}
 .hero__sub{max-width:24em}
 .hero__cta .btn .i{width:20px;height:20px;margin-right:8px}
-/* сезони: нерухомі кадри, нове фото проявляється поверх попереднього (без відео й стиснення) */
-.hero__media .slide img{opacity:0;transition:opacity 1.6s cubic-bezier(.4,0,.2,1)}
-.hero__media .slide.is-on img{opacity:1}
-.hero__media .slide.no-tr img{transition:none}
 /* підпис сезону біля паузи */
 .season{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(238,236,226,.6);background:rgba(0,7,5,.35);color:var(--cream);font:400 12px/1 var(--f-head);letter-spacing:.14em;text-transform:uppercase;transition:opacity .25s cubic-bezier(.22,.61,.36,1)}
 .season.is-out{opacity:0}
@@ -851,12 +864,19 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
 <section class="top" id="top">
   <div class="hero" id="hero" aria-labelledby="hero-title">
     <div class="hero__media" id="heroMedia">
-      <picture class="slide is-on" data-season="Басейн увечері"><source media="(max-width: 760px)" srcset="img/hero-s1-m.webp" width="768" height="1376"><img src="img/hero-s1.webp" width="1600" height="900" alt="Басейн з підігрівом під гірляндою на заході, садиба Байка Карпат у Ворохті" fetchpriority="high" decoding="async"></picture>
-      <picture class="slide" data-season="Будинок у вогнях"><source media="(max-width: 760px)" srcset="img/hero-s2-m.webp" width="768" height="1376"><img src="img/hero-s2.webp" width="1600" height="900" alt="" fetchpriority="low" decoding="async"></picture>
-      <picture class="slide" data-season="Тераса на заході"><source media="(max-width: 760px)" srcset="img/hero-s3-m.webp" width="768" height="1376"><img src="img/hero-s3.webp" width="1600" height="900" alt="" fetchpriority="low" decoding="async"></picture>
-      <picture class="slide" data-season="Зима з вікна"><source media="(max-width: 760px)" srcset="img/hero-s4-m.webp" width="768" height="1376"><img src="img/hero-s4.webp" width="1600" height="900" alt="" fetchpriority="low" decoding="async"></picture>
+      <picture><source media="(max-width: 760px)" srcset="img/hero-bg-m.webp" width="720" height="1280"><img src="img/hero-bg.webp" width="1600" height="900" alt="" fetchpriority="high" decoding="async"></picture>
     </div>
     <div class="hero__scrim" aria-hidden="true"></div>
+    <figure class="arch" id="heroArch">
+      <div class="arch__in">
+        <img class="slide is-on" data-season="Будинок і басейн" src="img/hero-a1.webp" width="840" height="1176" alt="Будинок і басейн, садиба Байка Карпат" fetchpriority="high" decoding="async">
+        <img class="slide" data-season="Будинок і котедж узимку" src="img/hero-a2.webp" width="840" height="1176" alt="Будинок і котедж узимку, садиба Байка Карпат" fetchpriority="low" decoding="async">
+        <img class="slide" data-season="Вечір у вогнях" src="img/hero-a3.webp" width="840" height="1176" alt="Вечір у вогнях, садиба Байка Карпат" fetchpriority="low" decoding="async">
+        <img class="slide" data-season="Новий котедж" src="img/hero-a4.webp" width="840" height="1176" alt="Новий котедж, садиба Байка Карпат" fetchpriority="low" decoding="async">
+        <img class="slide" data-season="Зимовий вечір" src="img/hero-a5.webp" width="840" height="1176" alt="Зимовий вечір, садиба Байка Карпат" fetchpriority="low" decoding="async">
+      </div>
+      <figcaption class="arch__cap" id="season">Будинок і&nbsp;басейн</figcaption>
+    </figure>
     <div class="hero__in">
       <h1 id="hero-title"><span aria-hidden="true"><span class="nw">Байка</span> <span class="nw">К<svg class="wm" viewBox="0 0 64 104"><use href="#i-mark"/></svg>рпат</span></span><span class="sr">Байка Карпат, апартаменти й&nbsp;котедж з&nbsp;басейном у&nbsp;Ворохті</span></h1>
       <p class="hero__sub">Апартаменти й&nbsp;котедж на&nbsp;пагорбі над Ворохтою. Басейн з&nbsp;підігрівом тільки для гостей.</p>
@@ -871,7 +891,6 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
     </div>
     <p class="hero__note" id="heroNote">Фото садиби з&nbsp;Instagram і&nbsp;Google-картки.</p>
     <div class="hero__ctl">
-      <span class="season" id="season" aria-live="off">Басейн увечері</span>
       <button class="hero__pause" id="slidePause" type="button" aria-pressed="false" aria-label="Зупинити зміну сезонів" hidden><svg class="i i--fill i-pause" viewBox="0 0 14 14" aria-hidden="true"><use href="#i-pause"/></svg><svg class="i i--fill i-play" viewBox="0 0 14 14" aria-hidden="true"><use href="#i-play"/></svg></button>
     </div>
     <a class="qc" id="qc" href="#qb"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg><span class="qc__t" id="qcT">Вільні дати · 2 дорослих · Обрати</span><span class="qc__go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span></a>
@@ -2248,7 +2267,7 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
 </script>
 <script>
 (function(){
-  var d = document, slides = [].slice.call(d.querySelectorAll('#heroMedia .slide')), label = d.getElementById('season'), btn = d.getElementById('slidePause');
+  var d = document, slides = [].slice.call(d.querySelectorAll('#heroArch .slide')), label = d.getElementById('season'), btn = d.getElementById('slidePause');
   if (slides.length < 2) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var cur = 0, z = 1, paused = false, HOLD = 4200, FADE = 1600;
