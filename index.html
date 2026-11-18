@@ -24,8 +24,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/hero-summer.webp" media="(min-width: 761px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/hero-summer-m.webp" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-s1.webp" media="(min-width: 761px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-s1-m.webp" media="(max-width: 760px)" fetchpriority="high">
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "@id": "https://ananinalist-maker.github.io/proto-bayka-karpat/#bayka", "name": "Байка Карпат", "alternateName": ["Байка Карпат Ворохта", "Відпочинковий комплекс «Байка Карпат»"], "description": "Апартаменти й новий котедж на пагорбі над Ворохтою: кухні, басейн з підігрівом тільки для гостей, чан, сауна, тераса з видом на Говерлу. Бронювання напряму в господині.", "url": "https://ananinalist-maker.github.io/proto-bayka-karpat/", "telephone": "+380964751576", "sameAs": ["https://www.instagram.com/bayka_karpat_vorokhta", "https://www.tiktok.com/@baykakarpat"], "image": ["https://ananinalist-maker.github.io/proto-bayka-karpat/img/og.jpg", "https://ananinalist-maker.github.io/proto-bayka-karpat/img/ig-house-pool.webp", "https://ananinalist-maker.github.io/proto-bayka-karpat/img/cottage-log.webp", "https://ananinalist-maker.github.io/proto-bayka-karpat/img/pool-dusk.webp"], "address": {"@type": "PostalAddress", "streetAddress": "вулиця Михайла Грушевського, 88", "addressLocality": "Ворохта", "addressRegion": "Івано-Франківська область", "postalCode": "78595", "addressCountry": "UA"}, "geo": {"@type": "GeoCoordinates", "latitude": 48.2880136, "longitude": 24.5693873}, "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJ1SQV5WzhNkcR0ZgD4YV8-o4", "availableLanguage": ["uk"], "petsAllowed": true, "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Басейн з підігрівом тільки для гостей", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Чан", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Сауна", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Кухня в кожному житлі", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Мангал і альтанка", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Тераса з гамаками", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Трансфер з вокзалу за домовленістю", "value": true}], "containsPlace": [{"@type": "Accommodation", "name": "Апартаменти на першому поверсі", "description": "Три окремі спальні, у кожній двоспальне ліжко. Своя кухня, щоб готувати як удома, і окрема ванна кімната."}, {"@type": "Accommodation", "name": "Апартаменти на другому поверсі", "description": "Чотири спальні, два санвузли, кухня і велика вітальня з панорамним вікном на гори. Окремий вхід і балкон з гойдалкою."}, {"@type": "Accommodation", "name": "Новий котедж 2024 року", "description": "Котедж із колоди, збудований у 2024 році. Три окремі спальні, кожна зі своїм санвузлом, повноцінна кухня і зал для відпочинку."}]}</script>
 <style>
@@ -716,10 +716,12 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
 .top{margin-inline:calc(50% - 50vw)}
 .hero{inset:0!important}
 .hero h1 .nw{white-space:nowrap}
-@media (max-width:760px){.hero h1 .nw{display:block}.hero h1 .l2{padding-left:0}.cover .wordmark{white-space:normal;flex-direction:column;font-size:clamp(40px,14vw,64px);line-height:1.05;letter-spacing:.08em}.cover .wordmark .nw{display:block;white-space:nowrap}}
+.hero h1 .nw{display:block}
+@media (max-width:760px){.hero h1 .l2{padding-left:0}.cover .wordmark{white-space:normal;flex-direction:column;font-size:clamp(40px,14vw,64px);line-height:1.05;letter-spacing:.08em}.cover .wordmark .nw{display:block;white-space:nowrap}}
 .hero__media{animation:none!important}
 .hero__scrim{background:linear-gradient(90deg,rgba(0,7,5,.8) 0%,rgba(0,7,5,.55) 36%,rgba(0,7,5,0) 66%),linear-gradient(0deg,rgba(0,7,5,.5) 0%,rgba(0,7,5,0) 30%),linear-gradient(180deg,rgba(0,7,5,.45) 0%,rgba(0,7,5,0) 22%)!important}
 .hero h1,.hero__sub{text-shadow:0 2px 16px rgba(0,8,5,.5)}
+.hero__sub{max-width:24em}
 .hero__cta .btn .i{width:20px;height:20px;margin-right:8px}
 /* сезони: нерухомі кадри, нове фото проявляється поверх попереднього (без відео й стиснення) */
 .hero__media .slide img{opacity:0;transition:opacity 1.6s cubic-bezier(.4,0,.2,1)}
@@ -849,10 +851,10 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
 <section class="top" id="top">
   <div class="hero" id="hero" aria-labelledby="hero-title">
     <div class="hero__media" id="heroMedia">
-      <picture class="slide is-on" data-season="Літо"><source media="(max-width: 760px)" srcset="img/hero-summer-m.webp" width="768" height="1376"><img src="img/hero-summer.webp" width="1600" height="900" alt="Садиба Байка Карпат: будинок, котедж і басейн над Ворохтою" fetchpriority="high" decoding="async"></picture>
-      <picture class="slide" data-season="Осінь"><source media="(max-width: 760px)" srcset="img/hero-autumn-m.webp" width="768" height="1376"><img src="img/hero-autumn.webp" width="1600" height="900" alt="" fetchpriority="low" decoding="async"></picture>
-      <picture class="slide" data-season="Зима"><source media="(max-width: 760px)" srcset="img/hero-winter-m.webp" width="768" height="1376"><img src="img/hero-winter.webp" width="1600" height="900" alt="" fetchpriority="low" decoding="async"></picture>
-      <picture class="slide" data-season="Весна"><source media="(max-width: 760px)" srcset="img/hero-spring-m.webp" width="768" height="1376"><img src="img/hero-spring.webp" width="1600" height="900" alt="" fetchpriority="low" decoding="async"></picture>
+      <picture class="slide is-on" data-season="Басейн увечері"><source media="(max-width: 760px)" srcset="img/hero-s1-m.webp" width="768" height="1376"><img src="img/hero-s1.webp" width="1600" height="900" alt="Басейн з підігрівом під гірляндою на заході, садиба Байка Карпат у Ворохті" fetchpriority="high" decoding="async"></picture>
+      <picture class="slide" data-season="Будинок у вогнях"><source media="(max-width: 760px)" srcset="img/hero-s2-m.webp" width="768" height="1376"><img src="img/hero-s2.webp" width="1600" height="900" alt="" fetchpriority="low" decoding="async"></picture>
+      <picture class="slide" data-season="Тераса на заході"><source media="(max-width: 760px)" srcset="img/hero-s3-m.webp" width="768" height="1376"><img src="img/hero-s3.webp" width="1600" height="900" alt="" fetchpriority="low" decoding="async"></picture>
+      <picture class="slide" data-season="Зима з вікна"><source media="(max-width: 760px)" srcset="img/hero-s4-m.webp" width="768" height="1376"><img src="img/hero-s4.webp" width="1600" height="900" alt="" fetchpriority="low" decoding="async"></picture>
     </div>
     <div class="hero__scrim" aria-hidden="true"></div>
     <div class="hero__in">
@@ -867,9 +869,9 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
       <a href="tel:+380964751576" aria-label="Подзвонити: +380 96 475 15 76"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></a>
       <a href="viber://chat?number=%2B380964751576" aria-label="Написати у Viber"><svg class="i" aria-hidden="true"><use href="#i-viber"/></svg></a>
     </div>
-    <p class="hero__note" id="heroNote">Настроєві кадри зібрані для прототипу за&nbsp;фото садиби: садиба в&nbsp;чотири пори року. У&nbsp;робочій версії тут будуть ваші фото й&nbsp;відео.</p>
+    <p class="hero__note" id="heroNote">Фото садиби з&nbsp;Instagram і&nbsp;Google-картки.</p>
     <div class="hero__ctl">
-      <span class="season" id="season" aria-live="off">Літо</span>
+      <span class="season" id="season" aria-live="off">Басейн увечері</span>
       <button class="hero__pause" id="slidePause" type="button" aria-pressed="false" aria-label="Зупинити зміну сезонів" hidden><svg class="i i--fill i-pause" viewBox="0 0 14 14" aria-hidden="true"><use href="#i-pause"/></svg><svg class="i i--fill i-play" viewBox="0 0 14 14" aria-hidden="true"><use href="#i-play"/></svg></button>
     </div>
     <a class="qc" id="qc" href="#qb"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg><span class="qc__t" id="qcT">Вільні дати · 2 дорослих · Обрати</span><span class="qc__go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span></a>
@@ -916,8 +918,8 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
         <p>Байка Карпат стоїть на&nbsp;високому пагорбі над Ворохтою, на&nbsp;вулиці Михайла Грушевського. Звідси видно хребти, старий віадук, а&nbsp;в&nbsp;ясну погоду й&nbsp;Говерлу. Довкола тихо, сусіди не&nbsp;за&nbsp;стіною.</p>
         <p>На&nbsp;ділянці двоє апартаментів у&nbsp;великому будинку і&nbsp;новий котедж, басейн з&nbsp;підігрівом, чан, сауна і&nbsp;тераса з&nbsp;гамаками. Гостей зустрічає господиня Наталія з&nbsp;чоловіком, і&nbsp;багато хто повертається сюди вдруге й&nbsp;уп’яте.</p>
       </div>
-      <figure class="ph about__a" data-rv><button class="zoom js-lb" type="button" data-cap="Будинок з апартаментами, басейн і дерев’яна тераса"><img width="768" height="1376" src="img/ig-house-pool.webp" alt="Будинок з апартаментами, басейн і дерев’яна тераса" loading="lazy" decoding="async"></button></figure>
-      <figure class="ph about__b" data-rv><button class="zoom js-lb" type="button" data-cap="Новий котедж із колоди"><img width="896" height="1200" src="img/cottage-log.webp" alt="Новий котедж із колоди" loading="lazy" decoding="async"></button></figure>
+      <figure class="ph about__a" data-rv><button class="zoom js-lb" type="button" data-cap="Будинок з апартаментами, басейн і дерев’яна тераса"><img width="1080" height="1920" src="img/ig-house-pool.webp" alt="Будинок з апартаментами, басейн і дерев’яна тераса" loading="lazy" decoding="async"></button></figure>
+      <figure class="ph about__b" data-rv><button class="zoom js-lb" type="button" data-cap="Новий котедж із колоди"><img width="1280" height="1707" src="img/cottage-log.webp" alt="Новий котедж із колоди" loading="lazy" decoding="async"></button></figure>
       <figure class="ph about__c" data-rv><button class="zoom js-lb" type="button" data-cap="Туман між горами над Ворохтою, вид з садиби"><img width="1280" height="1707" src="img/view-fog.webp" alt="Туман між горами над Ворохтою, вид з садиби" loading="lazy" decoding="async"></button></figure>
     </div>
   </div>
@@ -974,17 +976,17 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
       <div class="rcar" id="rcar" data-rv tabindex="-1">
 
 <article class="rcard">
-          <img width="896" height="1200" src="img/bed-wood.webp" alt="Апартаменти на першому поверсі" loading="lazy" decoding="async">
+          <img width="1280" height="1707" src="img/bed-wood.webp" alt="Апартаменти на першому поверсі" loading="lazy" decoding="async">
           <button class="rcard__hit" type="button" data-open="tpl-apt1" aria-label="Апартаменти, 1 поверх, детальніше"></button>
           <div class="rcard__bar"><div><h3>Апартаменти, 1 поверх</h3><p>три спальні і&nbsp;своя кухня</p></div><span class="rcard__go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span></div>
         </article>
 <article class="rcard">
-          <img width="896" height="1200" src="img/living.webp" alt="Апартаменти на другому поверсі" loading="lazy" decoding="async">
+          <img width="1280" height="1707" src="img/living.webp" alt="Апартаменти на другому поверсі" loading="lazy" decoding="async">
           <button class="rcard__hit" type="button" data-open="tpl-apt2" aria-label="Апартаменти, 2 поверх, детальніше"></button>
           <div class="rcard__bar"><div><h3>Апартаменти, 2 поверх</h3><p>для компанії до&nbsp;10 гостей</p></div><span class="rcard__go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span></div>
         </article>
 <article class="rcard">
-          <img width="896" height="1200" src="img/cottage-log.webp" alt="Новий котедж 2024 року" loading="lazy" decoding="async">
+          <img width="1280" height="1707" src="img/cottage-log.webp" alt="Новий котедж 2024 року" loading="lazy" decoding="async">
           <button class="rcard__hit" type="button" data-open="tpl-cottage" aria-label="Новий котедж, детальніше"></button>
           <div class="rcard__bar"><div><h3>Новий котедж</h3><p>три спальні, у&nbsp;кожній свій санвузол</p></div><span class="rcard__go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span></div>
         </article>
@@ -1169,10 +1171,10 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
       <aside class="mybook" aria-labelledby="my-t" data-rv>
         <h3 id="my-t">Моє бронювання</h3>
         <div class="mybook__room" aria-hidden="true">
-          <img data-r="any" width="768" height="1376" class="is-on" src="img/ig-house-pool.webp" alt="" loading="lazy" decoding="async">
-          <img data-r="apt1" width="896" height="1200" src="img/bed-wood.webp" alt="" loading="lazy" decoding="async">
-          <img data-r="apt2" width="896" height="1200" src="img/living.webp" alt="" loading="lazy" decoding="async">
-          <img data-r="cottage" width="896" height="1200" src="img/cottage-log.webp" alt="" loading="lazy" decoding="async">
+          <img data-r="any" width="1080" height="1920" class="is-on" src="img/ig-house-pool.webp" alt="" loading="lazy" decoding="async">
+          <img data-r="apt1" width="1280" height="1707" src="img/bed-wood.webp" alt="" loading="lazy" decoding="async">
+          <img data-r="apt2" width="1280" height="1707" src="img/living.webp" alt="" loading="lazy" decoding="async">
+          <img data-r="cottage" width="1280" height="1707" src="img/cottage-log.webp" alt="" loading="lazy" decoding="async">
         </div>
         <p class="mybook__name" id="myName">Що&nbsp;буде вільно</p>
         <dl>
@@ -1229,7 +1231,7 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
       </div>
     </div>
     <div class="foot__cr">
-      <p>Фото з&nbsp;Instagram і&nbsp;Google-картки садиби. Відео на&nbsp;першому екрані настроєве: зібране для прототипу за&nbsp;фото садиби (Google Flow). У&nbsp;робочій версії тут будуть ваші фото й&nbsp;відео.</p>
+      <p>Усі фото на&nbsp;сайті справжні: з&nbsp;Instagram і&nbsp;Google-картки садиби, лише з&nbsp;корекцією світла.</p>
       <p>Відстані й&nbsp;карта: OpenStreetMap. Цитати: відгуки гостей у&nbsp;Google.</p>
       <p>Прототип сайту для садиби «Байка Карпат», зібраний за&nbsp;відкритими даними, це&nbsp;не&nbsp;офіційний сайт. У&nbsp;робочій версії сайт налаштовується під пошук Google і&nbsp;під відповіді ChatGPT та&nbsp;інших AI-помічників, щоб садибу знаходили ті, хто шукає, де&nbsp;зупинитися у&nbsp;Ворохті.</p>
     </div>
@@ -1252,8 +1254,8 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
 <template id="tpl-apt1">
   <div class="rdlg__in">
     <div class="rdlg__pic">
-      <img width="896" height="1200" class="rdlg__main" src="img/bed-wood.webp" alt="Апартаменти на першому поверсі">
-      <div class="rdlg__thumbs"><button type="button" data-src="img/bed-wood.webp" aria-current="true" aria-label="Фото 1"><img width="896" height="1200" src="img/bed-wood.webp" alt="" loading="lazy"></button><button type="button" data-src="img/kitchen.webp" aria-label="Фото 2"><img width="896" height="1200" src="img/kitchen.webp" alt="" loading="lazy"></button><button type="button" data-src="img/bath.webp" aria-label="Фото 3"><img width="896" height="1200" src="img/bath.webp" alt="" loading="lazy"></button><button type="button" data-src="img/hall.webp" aria-label="Фото 4"><img width="896" height="1200" src="img/hall.webp" alt="" loading="lazy"></button><button type="button" data-src="img/house-day.webp" aria-label="Фото 5"><img width="896" height="1200" src="img/house-day.webp" alt="" loading="lazy"></button></div>
+      <img width="1280" height="1707" class="rdlg__main" src="img/bed-wood.webp" alt="Апартаменти на першому поверсі">
+      <div class="rdlg__thumbs"><button type="button" data-src="img/bed-wood.webp" aria-current="true" aria-label="Фото 1"><img width="1280" height="1707" src="img/bed-wood.webp" alt="" loading="lazy"></button><button type="button" data-src="img/kitchen.webp" aria-label="Фото 2"><img width="1280" height="1707" src="img/kitchen.webp" alt="" loading="lazy"></button><button type="button" data-src="img/bath.webp" aria-label="Фото 3"><img width="1280" height="1707" src="img/bath.webp" alt="" loading="lazy"></button><button type="button" data-src="img/hall.webp" aria-label="Фото 4"><img width="1280" height="1707" src="img/hall.webp" alt="" loading="lazy"></button><button type="button" data-src="img/house-day.webp" aria-label="Фото 5"><img width="960" height="1280" src="img/house-day.webp" alt="" loading="lazy"></button></div>
     </div>
     <div class="rdlg__body">
       <h3>Апартаменти на&nbsp;першому поверсі</h3>
@@ -1269,8 +1271,8 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
 </template><template id="tpl-apt2">
   <div class="rdlg__in">
     <div class="rdlg__pic">
-      <img width="896" height="1200" class="rdlg__main" src="img/living.webp" alt="Апартаменти на другому поверсі">
-      <div class="rdlg__thumbs"><button type="button" data-src="img/living.webp" aria-current="true" aria-label="Фото 1"><img width="896" height="1200" src="img/living.webp" alt="" loading="lazy"></button><button type="button" data-src="img/bed-grey.webp" aria-label="Фото 2"><img width="896" height="1200" src="img/bed-grey.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-bed-twin.webp" aria-label="Фото 3"><img width="896" height="1200" src="img/ig-bed-twin.webp" alt="" loading="lazy"></button><button type="button" data-src="img/balcony-swing.webp" aria-label="Фото 4"><img width="1280" height="1707" src="img/balcony-swing.webp" alt="" loading="lazy"></button><button type="button" data-src="img/house-night.webp" aria-label="Фото 5"><img width="1200" height="896" src="img/house-night.webp" alt="" loading="lazy"></button></div>
+      <img width="1280" height="1707" class="rdlg__main" src="img/living.webp" alt="Апартаменти на другому поверсі">
+      <div class="rdlg__thumbs"><button type="button" data-src="img/living.webp" aria-current="true" aria-label="Фото 1"><img width="1280" height="1707" src="img/living.webp" alt="" loading="lazy"></button><button type="button" data-src="img/bed-grey.webp" aria-label="Фото 2"><img width="1125" height="1500" src="img/bed-grey.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-bed-twin.webp" aria-label="Фото 3"><img width="1280" height="2276" src="img/ig-bed-twin.webp" alt="" loading="lazy"></button><button type="button" data-src="img/balcony-swing.webp" aria-label="Фото 4"><img width="1280" height="1707" src="img/balcony-swing.webp" alt="" loading="lazy"></button><button type="button" data-src="img/house-night.webp" aria-label="Фото 5"><img width="1280" height="960" src="img/house-night.webp" alt="" loading="lazy"></button></div>
     </div>
     <div class="rdlg__body">
       <h3>Апартаменти на&nbsp;другому поверсі</h3>
@@ -1286,8 +1288,8 @@ textarea.inp{height:auto;min-height:92px;padding:13px 14px;line-height:1.45;resi
 </template><template id="tpl-cottage">
   <div class="rdlg__in">
     <div class="rdlg__pic">
-      <img width="896" height="1200" class="rdlg__main" src="img/cottage-log.webp" alt="Новий котедж 2024 року">
-      <div class="rdlg__thumbs"><button type="button" data-src="img/cottage-log.webp" aria-current="true" aria-label="Фото 1"><img width="896" height="1200" src="img/cottage-log.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-bed-log.webp" aria-label="Фото 2"><img width="896" height="1200" src="img/ig-bed-log.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-living-log.webp" aria-label="Фото 3"><img width="768" height="1376" src="img/ig-living-log.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-cocoon-night.webp" aria-label="Фото 4"><img width="896" height="1200" src="img/ig-cocoon-night.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-balcony-blue.webp" aria-label="Фото 5"><img width="1280" height="714" src="img/ig-balcony-blue.webp" alt="" loading="lazy"></button></div>
+      <img width="1280" height="1707" class="rdlg__main" src="img/cottage-log.webp" alt="Новий котедж 2024 року">
+      <div class="rdlg__thumbs"><button type="button" data-src="img/cottage-log.webp" aria-current="true" aria-label="Фото 1"><img width="1280" height="1707" src="img/cottage-log.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-bed-log.webp" aria-label="Фото 2"><img width="1280" height="1600" src="img/ig-bed-log.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-living-log.webp" aria-label="Фото 3"><img width="720" height="1280" src="img/ig-living-log.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-cocoon-night.webp" aria-label="Фото 4"><img width="1280" height="1600" src="img/ig-cocoon-night.webp" alt="" loading="lazy"></button><button type="button" data-src="img/ig-balcony-blue.webp" aria-label="Фото 5"><img width="1280" height="720" src="img/ig-balcony-blue.webp" alt="" loading="lazy"></button></div>
     </div>
     <div class="rdlg__body">
       <h3>Новий котедж 2024 року</h3>
